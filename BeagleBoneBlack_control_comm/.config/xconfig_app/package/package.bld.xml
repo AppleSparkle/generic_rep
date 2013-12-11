@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_app" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/app_pea8fnv.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="C:/CSS_prj/BeagleBoneBlack_control_comm/app.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/app_pea8fnv.mak" src="package.bld"/>
+        <srcFile name="package/cfg/app_pea8fnv.oea8fnv.dep" src="package/cfg/app_pea8fnv.c"/>
+        <srcFile name="package/cfg/app_pea8fnv.dep" src="package/cfg/app_pea8fnv.cfg"/>
+        <srcFile name="package/cfg/app.xea8fnv.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_app.tar.dep" src="package/rel/xconfig_app.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.arm.elf.A8Fnv"
+            version="ti.targets.arm.elf.A8Fnv{1,0,5.0,5"
+            rawVersion="5.0.5"
+            platform="ti.platforms.evmDM8168"
+            isa="v7A"
+            suffix="ea8fnv"
+            rootDir="C:/ti/ccsv5/tools/compiler/arm_5.0.5"
+            os="undefined"
+            rts="ti.targets.arm.rtsarm">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="app"
+        pname="app.pea8fnv"
+        target="ti.targets.arm.elf.A8Fnv"
+        platform="ti.platforms.evmAM3359"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/app_pea8fnv.cfg"
+        xCfgPrefix="package/cfg/app_pea8fnv"
+        cfgScript="C:/CSS_prj/BeagleBoneBlack_control_comm/app.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="app"
+        pname="app.xea8fnv"
+        target="ti.targets.arm.elf.A8Fnv"
+        platform="ti.platforms.evmAM3359"
+        profile="release"
+        xCfgScript="package/cfg/app_pea8fnv.cfg"
+        xCfgPrefix="package/cfg/app_pea8fnv"
+        cfgScript="C:/CSS_prj/BeagleBoneBlack_control_comm/app.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="app.xea8fnv"
+        args=""
+        groupName="app.xea8fnv"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_app"
+        pname="xconfig_app.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>
